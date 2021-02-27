@@ -46,8 +46,8 @@ async function cmd(...args) {
         '-c',
         'http.https://github.com/.extraheader=',
     ];
-    // const res = await capture('git', userArgs.concat(args));
-    const res = await capture('pwd');
+    const res = await capture('git', userArgs.concat(args));
+    // const res = await capture('pwd');
 
     if (res.code !== 0) {
         throw new Error(`Command 'git ${args.join(' ')}' failed: ${JSON.stringify(res)}`);
