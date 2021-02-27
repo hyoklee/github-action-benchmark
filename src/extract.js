@@ -185,6 +185,7 @@ function extractCatch2Result(output) {
     }
     function extractBench() {
         const startLine = nextLine()[0];
+        console.log(startLine);
         if (startLine === null) {
             return null;
         }
